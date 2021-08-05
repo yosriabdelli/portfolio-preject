@@ -37,7 +37,7 @@ const Navbar = () => {
                             <span className="nav-link" >Projets</span>
                         </li>
                         <li className="nav-item" onClick={contactsSection.onClick} selected={contactsSection.selected}>
-                            <span className="nav-link">Contacts</span>
+                            <span className="nav-link" >Contacts</span>
                         </li>
                     </ul>
                 </div>

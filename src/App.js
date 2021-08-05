@@ -1,5 +1,10 @@
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBars } from "@fortawesome/free-solid-svg-icons";
+
+
 import Particles from 'react-particles-js';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -9,12 +14,14 @@ import {
   useScrollSection,
   Section,
 } from 'react-scroll-section';
+import ScrollButton from './components/ScrolButon';
 
 
 function App() {
+  
   return (
     <>
-      <ScrollingProvider>
+      <ScrollingProvider >
         <Section id="home">
           <Navbar/>
           <Header/>
@@ -49,6 +56,7 @@ function App() {
         <Section id="projets" className="box">Projets</Section>
         <Section id="contacts"className="box">Contacts</Section>
       </ScrollingProvider>
+      <ScrollButton/>
     </>
   );
 }
