@@ -21,20 +21,20 @@ nav .navbar-brand {
 nav {
   z-index: 2;
 }
-nav a.nav-link {
+nav span.nav-link {
   letter-spacing: 0.0375rem;
   cursor: pointer;
 }
 nav ul li {
   text-transform: uppercase;
 }
-.navbar-nav > li > a {
+.navbar-nav > li > span.nav-link {
   color: var(--primary-white) !important;
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   position: relative;
 }
-.navbar-nav > li > a::before {
+.navbar-nav > li > span::before {
   content: '';
   position: absolute;
   top: 0;
@@ -44,9 +44,9 @@ nav ul li {
   background-color: var(--primary-orange);
   transition: all 0.4s;
 }
-.navbar-nav > li > a.active::before,
-.navbar-nav > li > a:focus::before,
-.navbar-nav > li > a:hover::before {
+.navbar-nav > li > span.active::before,
+.navbar-nav > li > span:focus::before,
+.navbar-nav > li > span:hover::before {
   width: 100%;
 }
 
@@ -75,6 +75,7 @@ nav ul li {
 .main-info h1 {
   color: var(--primary-orange);
   text-transform: uppercase;
+  margin-top: 5.5rem;
 }
 
 /*********** Typed Text ***********/
@@ -103,11 +104,22 @@ nav ul li {
 
 .tsparticles-canvas-el {
   position: absolute;
-  height: 100vh;
+  height: 90vh !important;
   width: 100vw;
   z-index: 1;
+  top: 0;
 }
-
+/*********** Section ***********/
+section {
+  position: relative;
+}
+section.box {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid;
+}
 @media (max-width: 768px) {
   .particles-canvas {
     display: none;
