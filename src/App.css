@@ -3,6 +3,9 @@
   --primary-white: #fff;
   --primary-orange: #f9ab00;
   --primary-dark: rgba(255, 255, 255, 0);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
+  --primary-black: #000;
 }
 body {
   font-family: 'Roboto Condensed', sans-serif;
@@ -15,7 +18,9 @@ nav .navbar-brand {
 }
 
 /*********** Menu Links ***********/
-
+nav {
+  z-index: 2;
+}
 nav a.nav-link {
   letter-spacing: 0.0375rem;
   cursor: pointer;
@@ -43,4 +48,74 @@ nav ul li {
 .navbar-nav > li > a:focus::before,
 .navbar-nav > li > a:hover::before {
   width: 100%;
+}
+
+/*********** Navbar ***********/
+
+.header-wraper {
+  position: relative;
+  background: url(joshua-aragon.jpg) no-repeat center;
+  height: 90vh;
+  background-size: cover;
+}
+.main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.main-info h1 {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+
+/*********** Typed Text ***********/
+
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+.btn-main-offer {
+  border: 1px solid var(--primary-red);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  /* background: var(--primary-orange); */
+  transition: all 0.4s;
+}
+.btn-main-offer:hover {
+  background-color: var(--primary-hover-red);
+  color: var(--primary-white);
+}
+/*********** Particles JS ***********/
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .particles-canvas {
+    display: none;
+  }
+  .main-info h1 {
+    font-size: 1.7rem !important;
+  }
+  .typed-text {
+    font-size: 1.3rem;
+  }
 }
